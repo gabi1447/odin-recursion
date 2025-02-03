@@ -1,3 +1,16 @@
+function mergeSort(array) {
+    // base case
+    if (array.length === 1) {
+        return array;
+    }
+
+    // recursive call
+    const [left, right] = splitArray(array);
+    const leftSorted = mergeSort(left);
+    const rightSorted = mergeSort(right);
+    return merge(leftSorted, rightSorted);
+}
+
 function merge(array1, array2) {
     let sortedArray = [];
 
@@ -35,3 +48,7 @@ function splitArray(array) {
     const rightArray = array.slice(middle);
     return [leftArray, rightArray];
 }
+
+const array = [45, 36, 58, 23, 108, 45, 34, 67, 2, 1, 0];
+const result = mergeSort(array);
+console.log(result);
