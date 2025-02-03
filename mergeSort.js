@@ -48,7 +48,3 @@ function splitArray(array) {
     const rightArray = array.slice(middle);
     return [leftArray, rightArray];
 }
-
-const array = [45, 36, 58, 23, 108, 45, 34, 67, 2, 1, 0];
-const result = mergeSort(array);
-console.log(result);
