@@ -42,7 +42,7 @@ function merge(array1, array2) {
 
 function splitArray(array) {
     const arrayLength = array.length;
-    middle = arrayLength / 2;
+    let middle = arrayLength / 2;
     middle = middle % 2 === 0 ? middle : Math.round(middle);
     const leftArray = array.slice(0, middle);
     const rightArray = array.slice(middle);
